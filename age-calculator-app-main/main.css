@@ -5,23 +5,25 @@ html {
     font-family: Poppins;
     background-color: hsl(0, 0%, 94%);
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 .main {
     height: 95vh;
-    margin: 0 auto;
     position: relative;
     display: flex;
+    flex-flow: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .container {
-    padding: 42px;
+    padding: 32px;
     background-color: #ffffff;
     border-radius: 32px 32px 128px 32px ;
-    min-width: 700px;
+    min-width: 50em;
 }
 
 label {
@@ -33,7 +35,7 @@ label {
 }
 
 
-input {
+input[type=text] {
     height: 42px;
     font-size: 32px;
     font-weight: 700;
@@ -41,11 +43,13 @@ input {
     font-family: 'Poppins', sans-serif;
     width: 120px;
     border-radius: 8px;
-    border: 1px solid hsl(0, 0%, 86%);
+    border: 1px solid hsl(0, 0%, 86%); 
+    outline: none;
 }
 
-input:focus{
-    border: 1px solid hsl(0, 100%, 44%);
+input[type=text]:focus{
+    border: 1px solid hsl(259, 100%, 65%);
+    caret-color: hsl(259, 100%, 65%);
 }
 
 .form-line {
@@ -105,42 +109,82 @@ button:hover {
     background-color: hsl(0, 0%, 8%);
 }
 
-/*media queries for smaller screen*/
 
-@media (max-width: 425px) {
-    button {
-        position: absolute;
-        left: 50%;
-        padding: 16px;
+/*media query quick fix for tablets*/
+
+@media (max-width: 830px) {
+    .main {
+        align-items: stretch;
+    }
+    .container {
+        min-width: 10em;
     }
 
     h1 {
-        font-size: 36px;
+        font-size: 4.5em;
     }
 
-    input {
-        height: 38px;
-        font-size: 16px;
+    input[type=text] {
+        height: 28px;
+        font-size: 1em;
         padding: 8px 12px;
-        width: 44px;
+        width: 60px;
         border-radius: 8px;
         border: 1px solid hsl(0, 0%, 86%);
         color: hsl(0, 0%, 8%);
     }
+}
+/*end of tablet patch*/
 
+/*media queries for smaller screen*/
+
+@media (max-width: 500px) {
+    button {
+        position: absolute;
+        left: 42%;
+        padding: 16px;
+    }
+
+    .main {
+        height: 90svh;
+        align-items: stretch;
+        padding: 10px;
+    }
+
+    
+
+    h1 {
+        font-size: 3em;
+    }
+
+    
+    
+    .form-line label {
+        font-weight: 700;
+        font-size: 12px;
+    }
 
     .form-line {
         justify-content: space-between;
         border: 1px dotted red;
     }
 
+    .form-line div {
+        padding-right: 0px;
+    }
+
     .container {
-        padding: 24px;
-        border-radius: 32px 32px 96px 32px ;
-        min-width: 300px;
+        padding: 38px 24px 24px 24px;
+        border-radius: 24px 24px 88px 24px ;
+        min-width: 10em;
+        min-height: 400px;
 
     }
 
     .button-divider {
+        margin: 42px auto;
+        padding: 24px 0;
     }
+
+    
 }
