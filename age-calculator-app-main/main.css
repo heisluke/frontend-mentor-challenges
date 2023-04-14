@@ -4,19 +4,24 @@
 html {
     font-family: Poppins;
     background-color: hsl(0, 0%, 94%);
+    box-sizing: border-box;
 }
 
 .main {
+    height: 95vh;
+    margin: 0 auto;
+    position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: end;
+    align-items: center;
 }
 
 .container {
-    
     padding: 42px;
     background-color: #ffffff;
-    border-radius: 32px 32px 64px 32px ;
+    border-radius: 32px 32px 128px 32px ;
+    width: 700px;
 }
 
 label {
@@ -41,6 +46,7 @@ input {
 
 .form-line {
     display: flex;
+    border: 1px dotted red;
 }
 
 .form-line div {
@@ -54,27 +60,40 @@ input {
 
 .button-divider {
     display: flex;
+    justify-content: space-between;
+    width: 100%;    
+    align-items: center;
+    border: 1px dotted red;
+    
 }
+
+hr {
+    width: 100%;
+    border: 1px solid hsl(0, 0%, 86%);
+}
+
 
 h1 .convertio {
     color: hsl(259, 100%, 65%);
 }
 
 h1 {
-    font-size: 128px;
-    line-height: 50%;
+    font-size: 96px;
+    line-height: 40%;
     font-weight: 800;
     font-style: italic;
 }
 
 .results {
-    margin-top: 42px;
+    border: 1px dotted red;
 }
 
 button {
     border: none;
     background-color: hsl(259, 100%, 65%);
     border-radius: 200px;
-    padding: 16px;
+    padding: 24px;
 }
 
+/*media queries for smaller screen*/
+/*height: 95svh;*/
