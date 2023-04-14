@@ -55,7 +55,6 @@ input[type=text]:focus{
 .form-line {
     display: flex;
     flex-flow: wrap;
-    border: 1px dotted red;
 }
 
 .form-line div {
@@ -72,7 +71,6 @@ input[type=text]:focus{
     justify-content: space-between;
     width: 100%;    
     align-items: center;
-    border: 1px dotted rgb(0, 8, 255);
 }
 
 hr {
@@ -93,9 +91,7 @@ h1 {
     font-style: italic;
 }
 
-.results {
-    border: 1px dotted red;
-}
+
 
 button {
     border: none;
@@ -107,6 +103,13 @@ button {
 
 button:hover {
     background-color: hsl(0, 0%, 8%);
+}
+
+p {
+    color: hsl(0, 100%, 67%);
+    font-style: italic;
+    margin-top: 8px;
+    font-size: 14px;
 }
 
 
@@ -166,7 +169,6 @@ button:hover {
 
     .form-line {
         justify-content: space-between;
-        border: 1px dotted red;
     }
 
     .form-line div {
