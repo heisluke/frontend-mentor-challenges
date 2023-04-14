@@ -1,0 +1,80 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap');*/
+
+
+html {
+    font-family: Poppins;
+    background-color: hsl(0, 0%, 94%);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.container {
+    
+    padding: 42px;
+    background-color: #ffffff;
+    border-radius: 32px 32px 64px 32px ;
+}
+
+label {
+    color: hsl(0, 1%, 44%);
+    text-transform: uppercase;
+    display: block;
+    padding-bottom: 4px;
+    letter-spacing: 0.25em;
+}
+
+
+input {
+    height: 42px;
+    font-size: 32px;
+    font-weight: 700;
+    padding: 12px 24px;
+    font-family: 'Poppins', sans-serif;
+    width: 120px;
+    border-radius: 8px;
+    border: 1px solid hsl(0, 0%, 86%);
+}
+
+.form-line {
+    display: flex;
+}
+
+.form-line div {
+    padding-right: 24px;
+}
+
+.form-line label {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.button-divider {
+    display: flex;
+}
+
+h1 .convertio {
+    color: hsl(259, 100%, 65%);
+}
+
+h1 {
+    font-size: 128px;
+    line-height: 50%;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.results {
+    margin-top: 42px;
+}
+
+button {
+    border: none;
+    background-color: hsl(259, 100%, 65%);
+    border-radius: 200px;
+    padding: 16px;
+}
+
