@@ -6,11 +6,12 @@ const convertAge = document.getElementById("convert-age");
 let dayFormError = document.querySelector(".day-form-error");
 let monthFormError = document.querySelector(".month-form-error");
 let yearFormError = document.querySelector(".year-form-error");
+let ghostStyler = document.querySelector("#ghost-styler")
 const currentDate = new Date();
 
 
 convertAge.addEventListener("click", ageCalc);
-
+/*this is cool, when will my stats sync?*/
 
 
 
@@ -19,40 +20,50 @@ function ageCalc() {
         dayFormError.textContent = "This field is required";
         monthFormError.textContent = "This field is required";
         yearFormError.textContent = "This field is required";
-        //orr, you could find out how to change an elements id or class name from javascript, and then switch the id to an already styled error tag in css 
-        console.log("OMOOO");
+        //the code below  send styles an empty span tag to show errors
+        ghostStyler.innerHTML = "<style> .top-label { color: hsl(0, 100%, 67%);} input[type=text]{border: 1px solid hsl(0, 100%, 67%);}  </style>"
+
+    } else if (day.value > 31 || month.value > 12 || year.value > currentDate.getFullYear()) {
+        dayFormError.textContent = "Must be a valid day";
+        monthFormError.textContent = "Must be a valid month";
+        yearFormError.textContent = "Must be in the past";
+        ghostStyler.innerHTML = "<style> .top-label { color: hsl(0, 100%, 67%);} input[type=text]{border: 1px solid hsl(0, 100%, 67%);}  </style>"
+        console.log("todays year is " + currentDate.getFullYear() );
+
     } else {
+        //idk a better way to reset the paragraph
+        dayFormError.textContent = "";
+        monthFormError.textContent = "";
+        yearFormError.textContent = "";
+        ghostStyler.innerHTML = "<style> .top-label { color: hsl(0, 1%, 44%);} input[type=text]{border: 1px solid hsl(0, 0%, 86%);}  </style>"
+        console.log("One step down!");
+
+        /*output elements*/
+        let yearsOutput = document.getElementById("years-output");
+        let monthsOutput = document.getElementById("months-output");
+        let daysOutput = document.getElementById("days-output");
+
+        /* user input handler */
+        let userDay = day.value;
+        let userMonth = month.value;
+        let userYear = year.value;
+
+        /*it workksss 😭😭😭😭, the new date() just needs the value to have "/" or "-" seperating it!*/
+        let birthDate = new Date(userMonth+"-"+userDay+"-"+userYear);
+        console.log(birthDate);
         
-    console.log("One step down!");
-    /*output elements*/
-    let yearsOutput = document.getElementById("years-output");
-    let monthsOutput = document.getElementById("months-output");
-    let daysOutput = document.getElementById("days-output");
 
-    /* Dynamic user data handler */
-    let userDay = day.value;
-    let userMonth = month.value;
-    let userYear = year.value;
+        let differenceInMilliseconds = currentDate.getTime() - birthDate.getTime();
+        
+        let millisecondsPerYear = 1000 * 60 * 60 * 24 * 365.25; //year answer
+        yearsOutput.textContent =  Math.floor(differenceInMilliseconds / millisecondsPerYear);
 
-    /*how tf do i make new date accept input??*/
-    console.log(userMonth, userDay, userYear);
-    let birthDate = new Date(month.value/day.value/year.value);
-    console.log(birthDate);
-    /*end of how tf do i make new date accept input??*/
+        let millisecondsPerMonth = 1000 * 60 * 60 * 24 * 30.44; // average month length
+        monthsOutput.textContent = Math.floor((differenceInMilliseconds % millisecondsPerYear) / millisecondsPerMonth);
 
-    let differenceInMilliseconds = currentDate.getTime() - birthDate.getTime();
+        let millisecondsPerDay = 1000 * 60 * 60 * 24; // day answer
+        daysOutput.textContent = Math.floor((differenceInMilliseconds % millisecondsPerMonth) / millisecondsPerDay);
     
-
-
-    let millisecondsPerYear = 1000 * 60 * 60 * 24 * 365.25; //year answer
-    yearsOutput.textContent =  Math.floor(differenceInMilliseconds / millisecondsPerYear);
-
-    let millisecondsPerMonth = 1000 * 60 * 60 * 24 * 30.44; // average month length
-    monthsOutput.textContent = Math.floor((differenceInMilliseconds % millisecondsPerYear) / millisecondsPerMonth);
-
-    let millisecondsPerDay = 1000 * 60 * 60 * 24; // day answer
-    daysOutput.textContent = Math.floor((differenceInMilliseconds % millisecondsPerMonth) / millisecondsPerDay);
-  
 
     }
 };
