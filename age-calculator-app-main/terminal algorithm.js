@@ -2,6 +2,7 @@ console.log("Welcome to Lou's Magic Age Calculator");
 
 let userName = prompt("What's your name?");
 let birthDate = new Date(prompt("MM/DD/YYYY"));
+console.log( "idea of how dates collected, birthDats is" + birthDate);
 let currentDate = new Date();
 let differenceInMilliseconds = currentDate.getTime() - birthDate.getTime();
 
