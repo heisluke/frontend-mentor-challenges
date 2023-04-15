@@ -14,6 +14,8 @@ convertAge.addEventListener("click", ageCalc);
 /*this is cool, when will my stats sync?*/
 
 
+//let exmonth = [4,6,9,11];
+
 
 function ageCalc() {
     if (day.value == "" || month.value == "" || year.value =="") {
@@ -30,7 +32,14 @@ function ageCalc() {
         ghostStyler.innerHTML = "<style> .top-label { color: hsl(0, 100%, 67%);} input[type=text]{border: 1px solid hsl(0, 100%, 67%);}  </style>"
         console.log("todays year is " + currentDate.getFullYear() );
 
-    } else {
+    } /*else if (day.value === 31 && month.value === 4) {
+        for (let i = 0; i < exMonth.length; i++) {
+            if (exMonth[i] === exMonth[i]) {
+                console.log("won't allow dude");
+            }
+        }
+        
+    }*/ else {
         //idk a better way to reset the paragraph
         dayFormError.textContent = "";
         monthFormError.textContent = "";
@@ -48,7 +57,7 @@ function ageCalc() {
         let userYear = year.value;
 
         /*it workksss 😭😭😭😭, the new date() just needs the value to have "/" or "-" seperating it!*/
-        let birthDate = new Date(userMonth+"-"+userDay+"-"+userYear);        
+        let birthDate = new Date(userMonth+"-"+userDay+"-"+userYear);  
 
         let differenceInMilliseconds = currentDate.getTime() - birthDate.getTime();
         
