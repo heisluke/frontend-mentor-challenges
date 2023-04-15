@@ -98,7 +98,8 @@ button {
     background-color: hsl(259, 100%, 65%);
     border-radius: 200px;
     padding: 24px;
-    cursor: pointer;
+    cursor: pointer; 
+    transition: 0.3s;
 }
 
 button:hover {
@@ -142,10 +143,19 @@ p {
 /*media queries for smaller screen*/
 
 @media (max-width: 500px) {
+
+    p {
+        color: hsl(0, 100%, 67%);
+        font-style: italic;
+        margin-top: 8px;
+        font-size: 10px;
+    }
+
     button {
         position: absolute;
         left: 42%;
         padding: 16px;
+        transition: 0.3s;
     }
 
     .main {
@@ -169,11 +179,10 @@ p {
 
     .form-line {
         justify-content: space-between;
+        flex-flow: wrap;
     }
 
-    .form-line div {
-        padding-right: 0px;
-    }
+    
 
     .container {
         padding: 38px 24px 24px 24px;
