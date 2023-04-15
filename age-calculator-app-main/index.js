@@ -3,10 +3,10 @@ const day = document.getElementById("day");
 const month = document.getElementById("month");
 const year = document.getElementById("year");
 const convertAge = document.getElementById("convert-age");
-let dayFormError = document.querySelector(".day-form-error");
-let monthFormError = document.querySelector(".month-form-error");
-let yearFormError = document.querySelector(".year-form-error");
-let ghostStyler = document.querySelector("#ghost-styler")
+const dayFormError = document.querySelector(".day-form-error");
+const monthFormError = document.querySelector(".month-form-error");
+const yearFormError = document.querySelector(".year-form-error");
+const ghostStyler = document.querySelector("#ghost-styler")
 const currentDate = new Date();
 
 
@@ -35,8 +35,7 @@ function ageCalc() {
         dayFormError.textContent = "";
         monthFormError.textContent = "";
         yearFormError.textContent = "";
-        ghostStyler.innerHTML = "<style> .top-label { color: hsl(0, 1%, 44%);} input[type=text]{border: 1px solid hsl(0, 0%, 86%);}  </style>"
-        console.log("One step down!");
+        ghostStyler.innerHTML = "<style> .top-label { color: hsl(0, 1%, 44%);} input[type=text]{border: 1px solid hsl(0, 0%, 86%);}  </style>";
 
         /*output elements*/
         let yearsOutput = document.getElementById("years-output");
@@ -49,9 +48,7 @@ function ageCalc() {
         let userYear = year.value;
 
         /*it workksss 😭😭😭😭, the new date() just needs the value to have "/" or "-" seperating it!*/
-        let birthDate = new Date(userMonth+"-"+userDay+"-"+userYear);
-        console.log(birthDate);
-        
+        let birthDate = new Date(userMonth+"-"+userDay+"-"+userYear);        
 
         let differenceInMilliseconds = currentDate.getTime() - birthDate.getTime();
         
