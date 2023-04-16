@@ -61,7 +61,7 @@ let differenceInMilliseconds = currentDate.getTime() - birthDate.getTime();
 
 ### Useful resources
 
-- [Convert iso date to milliseconds in Javascript- Stack Overflow](https://stackoverflow.com/questions/9229213/convert-iso-date-to-milliseconds-in-javascript) - This helped me understand how dates work in Javascript.
+- [Convert iso date to milliseconds in Javascript — Stack Overflow](https://stackoverflow.com/questions/9229213/convert-iso-date-to-milliseconds-in-javascript) - This helped me understand how dates work in Javascript.
 
 ## Author
 
