@@ -66,5 +66,5 @@ let differenceInMilliseconds = currentDate.getTime() - birthDate.getTime();
 ## Author
 
 - Website - [Luke Bamtefa](https://luke-at.me)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/donotlukeatme)
+**- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)**
+- Twitter - [@donotlukeatme](https://www.twitter.com/donotlukeatme)
