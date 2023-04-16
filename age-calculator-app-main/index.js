@@ -14,9 +14,6 @@ convertAge.addEventListener("click", ageCalc);
 /*this is cool, when will my stats sync?*/
 
 
-//let exmonth = [4,6,9,11];
-
-
 function ageCalc() {
     if (day.value == "" || month.value == "" || year.value =="") {
         dayFormError.textContent = "This field is required";
@@ -30,16 +27,14 @@ function ageCalc() {
         monthFormError.textContent = "Must be a valid month";
         yearFormError.textContent = "Must be in the past";
         ghostStyler.innerHTML = "<style> .top-label { color: hsl(0, 100%, 67%);} input[type=text]{border: 1px solid hsl(0, 100%, 67%);}  </style>"
-        console.log("todays year is " + currentDate.getFullYear() );
 
-    } /*else if (day.value === 31 && month.value === 4) {
-        for (let i = 0; i < exMonth.length; i++) {
-            if (exMonth[i] === exMonth[i]) {
-                console.log("won't allow dude");
-            }
-        }
+    } else if (day.value == 31 && (month.value == 4 || month.value == 6 || month.value == 9 || month.value == 11)) {
+        dayFormError.textContent = "Must be a valid day";
+        monthFormError.textContent = "Must be a valid month";
+        yearFormError.textContent = "Must be in the past";
+        ghostStyler.innerHTML = "<style> .top-label { color: hsl(0, 100%, 67%);} input[type=text]{border: 1px solid hsl(0, 100%, 67%);}  </style>"
         
-    }*/ else {
+    } else {
         //idk a better way to reset the paragraph
         dayFormError.textContent = "";
         monthFormError.textContent = "";
