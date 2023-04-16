@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/age-calculator-app-Q1EWDeSvxT](https://www.frontendmentor.io/solutions/age-calculator-app-Q1EWDeSvxT)
+- Live Site URL: [https://whatismyage.vercel.app/](https://whatismyage.vercel.app/)
 
 ## My process
 
