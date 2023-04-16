@@ -51,7 +51,7 @@ Users should be able to:
 
 ### What I learned
 
-One of challenges I encountered while building this was making the ```js new Date()``` take in the inputted value. It took me iterating in the console to find out that it only takes in th value if there's a `/` or a `-` seperating the values.
+One of challenges I encountered while building this was making the ```new Date()``` take in the inputted value. It took me iterating in the console to find out that it only takes in th value if there's a `/` or a `-` seperating the values.
 
 ```js
 let birthDate = new Date(userMonth+"-"+userDay+"-"+userYear);  
